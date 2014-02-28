@@ -1,4 +1,4 @@
-body {
+/*body {
 	margin: 1%;
 }
 
@@ -10,4 +10,146 @@ body {
 
 #system {
 	clear: both;
+}*/
+
+/*K.Hikida's CSS*/
+@charset "UTF-8";
+
+html {
+    height: 100%;
 }
+
+body {
+    background-color: rgb(242,238,231);
+    height: 100%;
+}
+
+/*Font-Style*/
+a,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:"Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", "Arial", "sans-serif";
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*Header*/
+header {
+    background-color: #fff;
+    height: 100px;
+}
+
+h1{
+    color: rgb(87,81,86);
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+/*==========*/
+/*Brainstorming*/
+#brainstorming {
+    margin-top: 50px;
+}
+/*==========*/
+/*Post-area*/
+.post-area {
+    margin-bottom: 20px;
+}
+
+.post-area:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.post-it {
+    border: 2px solid rgb(242,238,231);
+    float: left;
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.post-it p {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.post-it:hover > p {
+    height: 100%;
+    opacity: 1;
+    padding: 10px;
+}
+/*==========*/
+/*User style*/
+#user-1 .post-it {
+    background-color: rgb(253,241,13);
+}
+
+#user-2 .post-it {
+    background-color: rgb(228,0,121);
+}
+/*==========*/
+
+/*Transform*/
+.collect {
+    margin: 0 -40px;
+    position: relative;
+    -moz-transform: perspective(400px) rotateY(45deg);
+    -webkit-transform: perspective(400px) rotateY(45deg);
+    -ms-transform: perspective(400px) rotateY(45deg);
+    -o-transform: perspective(400px) rotateY(45deg);
+    transform: perspective(400px) rotateY(45deg);
+    -webkit-transition: .5s liner;
+    -moz-transition: .5s linear;
+    -ms-transition: .5s linear;
+    -o-transition: .5s linear;
+    transition: .5s linear;
+}
+
+.collect:hover {
+    margin: 0 -40px;
+    position: relative;
+    -moz-transform: perspective(400px) translate3D(10px,0,10px);
+    -webkit-transform: perspective(400px) translate3D(10px,0,10px);
+    -ms-transform: perspective(400px) translate3D(10px,0,10px);
+    -o-transform: perspective(400px) translate3D(10px,0,10px);
+    transform: perspective(400px) translate3D(10px,0,10px);
+    z-index: 2;
+}
+
+.top {
+    margin-left: 0;
+}
+/*==========*/
+/*Footer*/
+footer {
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+footer p {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+}
+/*==========*/
