@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ChattyConf</title>
+
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<h4>Peeping Brainstorming</h4>
+
+	<div>
+		<input type="text" class="" id="message" autofocus>
+	</div>
+
+	<div id="history">
+	</div>
+
+	<div id="system">
+		<h4>System</h4>		
+			<p>
+				create/join room
+				<input type="text" id="roomid" placeholder="room">
+				<input type="text" id="username" placeholder="name">
+				<button id="make-room">作成/参加</button>
+			</p>
+	</div>
+
+
+	<script src="./js/jquery-2.1.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="https://skyway.io/dist/0.3/peer.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+</html>

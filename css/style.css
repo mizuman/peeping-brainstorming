@@ -1,0 +1,13 @@
+body {
+	margin: 1%;
+}
+
+#history {
+	float: left;
+	max-height: 400px;
+	overflow: scroll;
+}
+
+#system {
+	clear: both;
+}
