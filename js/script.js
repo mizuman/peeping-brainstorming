@@ -147,7 +147,7 @@ function addHistory(data) {
 
 	if(data.type==='card') {
 		// item = '<tr><td align="right"><b>' + data.from.slice(namePrefix.length) + '</b> : </td><td>' + data.message + '</td></tr>';
-		item = '<div class="post-it"><p>' + data.message + '</p></div>';
+		item = '<div class="post-it top"><p>' + data.message + '</p></div>';
 		var jq = '#area-' + data.from.slice(namePrefix.length);
 		$(jq).prepend(item);
 

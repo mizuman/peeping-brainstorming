@@ -45,10 +45,19 @@ h1{
 #brainstorming {
     margin-top: 50px;
 }
+
+/*==========*/
+/*Input-area*/
+#message {
+    width: 236px;
+}
+
+
 /*==========*/
 /*Post-area*/
 .post-area {
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .post-area:after {
