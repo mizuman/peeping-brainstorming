@@ -6,6 +6,7 @@ var APIKEY = '41c2d0fa-97b8-11e3-9d13-25b648c02544';
 // ユーザーリスト
 var userList = [];	// オンラインのpeer id
 var chatList = [];	// 接続中のpeer id
+var ideaList = [];
 
 //Callオブジェクト
 var existingCall = [];
@@ -14,12 +15,15 @@ window.remoteStream = [];
 // ユーザ名をランダムに生成
 var namePrefix = 'chatty-';
 var userName = namePrefix + 'user' + Math.floor(Math.random() * 100);
+var loginTime;
 
 // PeerJSオブジェクトを生成
 // var peer = new Peer(userName,{ key: APIKEY});
 var peer;
 
 window.onload = function onLoad() {
+
+	userLoginCheck();
 
 	var param = GetQueryString();
 	if(param && param.roomid) {
@@ -34,6 +38,7 @@ window.onload = function onLoad() {
 
 	// PeerIDを生成
 	peer.on('open', function(){
+		loginTime = new Date();
 		$('#my-id').text(peer.id.slice(namePrefix.length));
 		getUserList();
 		connectAll();
@@ -144,21 +149,27 @@ function addHistory(data) {
 
 	console.log("receiveMsg : ",data);
 	var item = data.message;
+	var fromName = data.from.slice(namePrefix.length);
 
 	if(data.type==='card') {
 		// item = '<tr><td align="right"><b>' + data.from.slice(namePrefix.length) + '</b> : </td><td>' + data.message + '</td></tr>';
 		item = '<div class="post-it top"><p>' + data.message + '</p></div>';
-		var jq = '#area-' + data.from.slice(namePrefix.length);
+		var jq = '#area-' + fromName;
 		$(jq).prepend(item);
-
+		for(var i=0; i < ideaList.length;i++){
+			if(ideaList[i].name == fromName) {
+				ideaList[i].idea[ ideaList[i].idea.length ] = data.message;
+			}
+		}
 	}
 
 	if(data.type==='join') {
 		// item = '<tr class="info"><td align="right"><b>information</b> : </td><td>' + data.message + '</td></tr>';
-		var postitID = ''
+		var postitID = '';
 		if(data.from == peer.id) postitID="myPostIt";
-		item = '<div class="post-area ' + postitID + '" id="area-' + data.from.slice(namePrefix.length) + '"></div>';
+		item = '<div class="post-area ' + postitID + '" id="area-' + fromName + '"></div>';
 		$('#history').prepend(item);
+		ideaList[ideaList.length] = {name: fromName, idea: []};
 	}
 
 

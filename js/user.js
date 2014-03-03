@@ -2,6 +2,7 @@ var APP_ID = "ILyDldxKF1oXjxZhg8I6POjBRu5OcFSdEs9ZmwTi";
 var JS_KEY = "GACsIhgo1E9wBZDVzpVpU94hvRAuukYLO96OpIXS";
 
 var test_login;
+var userLoginCheck;
 
 var errorNotice = function(message){
 	var item = '<div class="alert alert-warning fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>' + message + '</div>';
@@ -10,6 +11,21 @@ var errorNotice = function(message){
 
 $(document).ready(function(){
 	Parse.initialize(APP_ID, JS_KEY);
+
+	userLoginCheck = function(){
+
+		if(location.pathname != "/index.html" && "/") {
+			console.log("login画面ではない");
+			if(!Parse.User.current()) {
+				userLogout();
+			}
+		} else {
+			console.log("login画面");
+		}
+
+
+
+	};
 
 	var userSignup = function(){
 		var signup_user = new Parse.User();
@@ -71,5 +87,5 @@ $(document).ready(function(){
 
 	$("#logout").on("click", function(){
 		userLogout();
-	});	
-})
+	});
+});
