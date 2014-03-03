@@ -135,6 +135,14 @@ h1{
 .top {
     margin-left: 0;
 }
+
+/*login*/
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
 /*==========*/
 /*Footer*/
 footer {

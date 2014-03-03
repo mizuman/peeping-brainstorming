@@ -19,28 +19,27 @@
 
 	<h4>Peeping Brainstorming</h4>
 
-	<div id="user-verify">
-		<form class="form-signin" id="login-form">
-			<input type="text" id="username" class="form-control" placeholder="username" required autofocus>
-			<input type="password" id="password" class="form-control" placeholder="password" required>
-			<input type="button" class="btn" id="login" value="Log in">
-			<input type="button" class="btn" id="signup" value="Sign up">
+	<div>
+		<input type="text" class="" id="message" placeholder="come up with your ideas" autofocus>
+	</div>
 
-			<div id="notice"></div>
+	<div id="history"></div>
 
-			<div id="test_login">
-				<a href="#" onclick="test_login();">ID,PWの入力が面倒な時はこちら</a>
-			</div>
-		</form>
+	<div id="system">
+		<h4>System</h4>		
+			<p>
+				create/join room
+				<input type="text" id="roomid" placeholder="room">
+				<input type="text" id="username" placeholder="name">
+				<button id="make-room">作成/参加</button>
+			</p>
 	</div>
 
 
 
 	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
 	<script src="https://skyway.io/dist/0.3/peer.js"></script>
-	<script src="./js/user.js"></script>
 	<script src="./js/script.js"></script>
 
 </body>
