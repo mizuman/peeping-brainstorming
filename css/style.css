@@ -46,12 +46,31 @@ h1{
 /*Brainstorming*/
 #brainstorming {
     border-bottom: 1px solid #eee;
-    margin: 50px 0 40px 50px;
+    margin: 30px 0 40px 60px;
+}
+
+#brainstorming h2 {
+    color: #333;
+    font-family: "Hannotate SC";
+    float: left;
+    letter-spacing: 0.1em;
+    padding-left: 10px;
+}
+
+.time-limit {
+    margin-left: 150px;
+    margin-bottom: 30px; 
+}
+
+.time-limit p{
+    font-family: "Hannotate SC";
+    font-size: 30px;
 }
 /*==========*/
 /*Post-area*/
 .post-area {
     margin-bottom: 50px;
+    clear: both;
 }
 
 .post-area:after {
