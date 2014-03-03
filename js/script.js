@@ -149,14 +149,16 @@ function addHistory(data) {
 		// item = '<tr><td align="right"><b>' + data.from.slice(namePrefix.length) + '</b> : </td><td>' + data.message + '</td></tr>';
 		item = '<div class="post-it"><p>' + data.message + '</p></div>';
 		var jq = '#area-' + data.from.slice(namePrefix.length);
-		$(jq).prepend(item);		
+		$(jq).prepend(item);
 
 	}
 
 	if(data.type==='join') {
 		// item = '<tr class="info"><td align="right"><b>information</b> : </td><td>' + data.message + '</td></tr>';
-		item = '<div class="post-area" id="area-' + data.from.slice(namePrefix.length) + '"></div>';
-		$('#history').prepend(item);		
+		var postitID = ''
+		if(data.from == peer.id) postitID="myPostIt";
+		item = '<div class="post-area ' + postitID + '" id="area-' + data.from.slice(namePrefix.length) + '"></div>';
+		$('#history').prepend(item);
 	}
 
 

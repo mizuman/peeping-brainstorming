@@ -1,17 +1,3 @@
-/*body {
-	margin: 1%;
-}
-
-#history {
-	float: left;
-	max-height: 400px;
-	overflow: scroll;
-}
-
-#system {
-	clear: both;
-}*/
-
 /*K.Hikida's CSS*/
 @charset "UTF-8";
 
@@ -78,9 +64,11 @@ h1{
     height: 100px;
     width: 100px;
     position: relative;
+    background-color: rgb(253,241,13);
 }
 
-.post-it p {
+.post-it p,
+.myPostIt .post-it p {
     color: #333;
     font-size: 14px;
     letter-spacing: 0.1em;
@@ -93,19 +81,18 @@ h1{
     transition: .5s ease;
 }
 
-.post-it:hover > p {
+.post-it:hover > p,
+.myPostIt .post-it p {
     height: 100%;
     opacity: 1;
     padding: 10px;
 }
+
 /*==========*/
 /*User style*/
-#user-1 .post-it {
-    background-color: rgb(253,241,13);
-}
-
-#user-2 .post-it {
-    background-color: rgb(228,0,121);
+.myPostIt .post-it {
+    /*self style*/
+    background-color: rgb(255,255,255);
 }
 /*==========*/
 
