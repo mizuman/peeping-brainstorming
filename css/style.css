@@ -1,4 +1,4 @@
-/*K.Hikida's CSS*/
+/*complex.css*/
 @charset "UTF-8";
 
 html {
@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-color: rgb(242,238,231);
+    background-color: rgb(255,255,255);
     height: 100%;
 }
 
@@ -27,15 +27,17 @@ h6 {
 
 /*Header*/
 header {
-    background-color: #fff;
+    background-color: rgb(242,238,231);
     height: 100px;
 }
 
 h1{
     color: rgb(87,81,86);
+    font-family: "Hannotate SC";
     font-size: 20px;
     font-weight: 200;
     letter-spacing: 0.2em;
+    margin-left: 50px;
     position: absolute;
     top: 40px;
     left: 20px;
@@ -43,21 +45,13 @@ h1{
 /*==========*/
 /*Brainstorming*/
 #brainstorming {
-    margin-top: 50px;
+    border-bottom: 1px solid #eee;
+    margin: 50px 0 40px 50px;
 }
-
-/*==========*/
-/*Input-area*/
-#message {
-    width: 236px;
-}
-
-
 /*==========*/
 /*Post-area*/
 .post-area {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .post-area:after {
@@ -67,22 +61,60 @@ h1{
 }
 
 .post-it {
-    border: 2px solid rgb(242,238,231);
+    /*border: 1px solid rgb(255,255,255);*/
     float: left;
     margin-left: 10px;
-    height: 100px;
-    width: 100px;
+    height: 10em;
+    width: 10em;
     position: relative;
-    background-color: rgb(253,241,13);
 }
 
-.post-it p,
-.myPostIt .post-it p {
+/*貼ってる風にする*/
+.post-it:before {
+    content: '';
+    background-color: #eee;
+    border: 1px solid #eee;
+    opacity: 0.5;
+    height: 20px;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    left:30%;
+    margin-top: -10px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.post-it:after {
+    content: "";
+    background-color: #777;
+    box-shadow: 0 15px 10px #777;
+    bottom: 15px;
+    right: 10px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.post-it p {
     color: #333;
+    font-family: "Hannotate SC";
     font-size: 14px;
     letter-spacing: 0.1em;
     height: 0;
-    opacity: 0;
+    /*opacity: 0;*/
+    padding: 10px;
     -webkit-transition: .5s ease;
     -moz-transition: .5s ease;
     -ms-transition: .5s ease;
@@ -90,18 +122,31 @@ h1{
     transition: .5s ease;
 }
 
-.post-it:hover > p,
-.myPostIt .post-it p {
+.post-it:hover > p {
     height: 100%;
     opacity: 1;
     padding: 10px;
 }
-
 /*==========*/
 /*User style*/
-.myPostIt .post-it {
-    /*self style*/
-    background-color: rgb(255,255,255);
+#user-1 .post-it {
+    background-color: rgb(255,255,204);
+}
+
+#user-2 .post-it {
+    background-color: rgb(255,204,204);
+}
+
+#user-3 .post-it {
+    background-color: rgb(204,255,255);
+}
+
+#user-4 .post-it {
+    background-color: rgb(204,255,204);
+}
+
+#user-5 .post-it {
+    background-color: rgb(204,204,255);
 }
 /*==========*/
 
@@ -121,7 +166,7 @@ h1{
     transition: .5s linear;
 }
 
-.collect:hover {
+/*.collect:hover {
     margin: 0 -40px;
     position: relative;
     -moz-transform: perspective(400px) translate3D(10px,0,10px);
@@ -130,30 +175,76 @@ h1{
     -o-transform: perspective(400px) translate3D(10px,0,10px);
     transform: perspective(400px) translate3D(10px,0,10px);
     z-index: 2;
-}
+}*/
 
 .top {
     margin-left: 0;
 }
-
-/*login*/
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+/*==========*/
+/*input-area*/
+#posting {
+    margin-left: 60px;
 }
 
+label {
+    display: block;
+    font-family: "Hannotate SC";
+    font-size: 1.2em;
+}
+
+.post-form {
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    height: 30px;
+    width: 50em;
+    padding: 5px;
+    -webkit-transition: .25s liner;
+    -moz-transition: .25s linear;
+    -ms-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear;
+}
+
+.post-form:focus {
+    background-color: rgb(204,255,255);
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.post-btn {
+    color: #333;
+    background-color: transparent;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+    -webkit-transition: .25s liner;
+    -moz-transition: .25s linear;
+    -ms-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear;
+}
+
+.post-btn:hover {
+    background-color: rgb(242,238,231);
+}
 /*==========*/
 /*Footer*/
 footer {
+    background-color: rgb(242,238,231);
     margin-top: 50px;
-    margin-left: 20px;
-    height: 50px;
+    height: 100px;
 }
 
 footer p {
+    background-color: rgb(242,238,231);
+    color: #333;
+    font-family: "Hannotate SC";
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 0.1em;
-}
+    padding: 42px 0 0 60px;
 /*==========*/
