@@ -235,7 +235,7 @@ h6 {
 
 #countdown span {
     font-family: "Hannotate SC";
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 10px;
 }
 
@@ -245,10 +245,12 @@ h6 {
     border: none;
     border-bottom: 1px solid #adadad;
     font-family: "Hannotate SC";
-    height: 30px;
+    font-size: 20px;
+    height: 50px;
     outline: 0;
     padding: 5px;
     text-align: right;
+    width: 100px;
     -webkit-transition: .25s liner;
     -moz-transition: .25s linear;
     -ms-transition: .25s linear;
@@ -259,6 +261,22 @@ h6 {
 .times:focus {
     background-color: rgb(255,255,204);
 }
+
+/*Placeholder Styling*/
+input::-webkit-input-placeholder {
+    font-family: "Hannotate SC";
+    font-size: 14px;
+    padding-top: 5px;
+    opacity: 0.6;
+}
+
+input:-moz-placeholder {
+    font-family: "Hannotate SC";
+    font-size: 14px;
+    padding-top: 5px;
+    opacity: 0.6;
+}
+/*==========*/
 
 .start,
 .stop {
