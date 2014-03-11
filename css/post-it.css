@@ -25,6 +25,15 @@ h6 {
     margin: 0;
 }
 
+/*Hidden-class*/
+.hidden-class {
+    opacity: 0;
+}
+
+.hidden-class:hover {
+    opacity: 0.7;
+}
+/*==========*/
 /*Header*/
 #post-page {
     background-color: rgb(242,238,231);
@@ -46,7 +55,7 @@ h6 {
 /*Brainstorming*/
 #brainstorming {
     border-bottom: 1px solid #eee;
-    margin: 30px 0 40px 60px;
+    margin: 30px 0 20px 60px;
 }
 
 #brainstorming h2 {
@@ -54,6 +63,7 @@ h6 {
     font-family: "Hannotate SC";
     float: left;
     letter-spacing: 0.1em;
+    margin-bottom: 30px;
     padding-left: 10px;
 }
 
@@ -131,8 +141,8 @@ h6 {
     font-family: "Hannotate SC";
     font-size: 14px;
     letter-spacing: 0.1em;
-    height: 0;
-    /*opacity: 0;*/
+    /*height: 0;
+    opacity: 0;*/
     padding: 10px;
     -webkit-transition: .5s ease;
     -moz-transition: .5s ease;
@@ -141,10 +151,13 @@ h6 {
     transition: .5s ease;
 }
 
-.post-it:hover > p {
-    height: 100%;
-    opacity: 1;
+/*.post-it:hover > p {
+    opacity: 0.6;
     padding: 10px;
+}*/
+
+.post-it:hover >.hidden-class{
+    opacity: 0.6;
 }
 /*==========*/
 /*User style*/
@@ -200,7 +213,89 @@ h6 {
     margin-left: 0;
 }
 /*==========*/
-/*input-area*/
+/*Countdown Timer*/
+#countdown {
+    border-bottom: 1px solid #eee;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+#countdown:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#countdown h2 {
+    font-family: "Hannotate SC";
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#countdown span {
+    font-family: "Hannotate SC";
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.times {
+    color: #333;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #adadad;
+    font-family: "Hannotate SC";
+    height: 30px;
+    outline: 0;
+    padding: 5px;
+    text-align: right;
+    -webkit-transition: .25s liner;
+    -moz-transition: .25s linear;
+    -ms-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear;
+}
+
+.times:focus {
+    background-color: rgb(255,255,204);
+}
+
+.start,
+.stop {
+    color: #333;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    font-family: "Hannotate SC";
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    height: 30px;
+    outline: 0;
+    width: 80px;
+    margin-left: 20px;
+    -webkit-transition: .25s liner;
+    -moz-transition: .25s linear;
+    -ms-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear;
+}
+
+.start {
+    background-color: rgba(204,255,204,1);
+}
+
+.stop {
+    background-color: rgba(255,204,204,1);
+}
+
+.start:hover {
+    background-color: rgba(204,255,204,0.7);
+}
+
+.stop:hover {
+    background-color: rgba(255,204,204,0.7);
+}
+/*==========*/
+/*Post*/
 #posting {
     margin-left: 70px;
 }
@@ -208,12 +303,14 @@ h6 {
 label {
     display: block;
     font-family: "Hannotate SC";
-    font-size: 1.2em;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .post-form {
     border: 1px solid #adadad;
     border-radius: 5px;
+    font-family: "Hannotate SC";
     height: 30px;
     width: 50em;
     padding: 5px;
@@ -233,9 +330,10 @@ label {
 
 .post-btn {
     color: #333;
-    background-color: transparent;
+    background-color: rgba(242,238,231,1);
     border: 1px solid #adadad;
     border-radius: 5px;
+    font-family: "Hannotate SC";
     letter-spacing: 0.1em;
     height: 30px;
     width: 80px;
@@ -248,7 +346,7 @@ label {
 }
 
 .post-btn:hover {
-    background-color: rgb(242,238,231);
+    background-color: rgba(242,238,231,0.7);
 }
 /*==========*/
 /*Footer*/

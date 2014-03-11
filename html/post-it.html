@@ -15,23 +15,23 @@
     </header>
 
     <div id="brainstorming">
-      <h2>Title</h2>
-      <div class="time-limit">
+      <h2>新しいBrainstormingのやり方について</h2>
+      <!--<div class="time-limit">
         <p>3:42</p>
-      </div>
+      </div>-->
       
     <div class="post-area" id="user-1">
       <div class="post-it">
-        <p>test</p>
+        <p class="hidden-class">test</p>
       </div>
       <div class="post-it">
-        <p>ここにテキストが入ります。</p>
+        <p class="hidden-class">ここにテキストが入ります。</p>
       </div>
       <div class="post-it">
-        <p>test</p>
+        <p class="hidden-class">test</p>
       </div>
       <div class="post-it">
-        <p>test</p>
+        <p class="hidden-class">test</p>
       </div>
     </div>
 
@@ -102,10 +102,22 @@
     </div>
   </div>
 
+    <!--Countdown Timer-->
+    <form id="countdown" name="timer">
+      <h2>Countdown Timer</h2>
+      <input class="times" type="text" value="">
+      <span>min</span>
+      <input class="times" type="text" value="">
+      <span>sec</span>
+      <input class="start" type="button" value="START" onclick="cntStart()">
+      <input class="stop" type="button" value="STOP" onclick="cntStop()">
+    </form>
+
+    <!--Post-->
     <form id="posting" method="post">
       <label>Hikida</label>
       <input type="text" class="post-form">
-      <input type="submit" class="post-btn" value="Send!">
+      <input type="submit" class="post-btn" value="Send">
     </form>
 
     <!--<div class="post-area" id="user-2">
@@ -148,6 +160,7 @@
     <!--Scripts-->
     <script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/countdown.js"></script>
   </body>
 
 </html>
