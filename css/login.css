@@ -1,0 +1,382 @@
+/*complex.css*/
+@charset "UTF-8";
+
+html {
+    height: 100%;
+    min-height: 1000px;
+    min-width: 1000px;
+}
+
+body {
+    height: 100%;
+    min-height: 1000px;
+    min-width: 1000px;
+    overflow: hidden;
+}
+
+/*Font-Style*/
+a,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:"Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", "Arial", "sans-serif";
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*enlarge*/
+@media(min-width: 768px){
+    #enlarge {
+        display: none;
+    }
+}
+@media(max-width: 768px){
+    #enlarge {
+        background-color: #fff;
+        height: 110%;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+    }
+    #enlarge p {
+        color: rgb(255,100,100);
+        font-family: "Hannotate SC";
+        font-size: 30px;
+        position: absolute;
+        top: 40%;
+        padding-left: 50px;
+    }
+}
+/*==========*/
+/*slope*/
+.slope-left {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+/*==========*/
+/*Header*/
+#top-page {
+    background-color: rgb(255,204,204);
+    float: left;
+    height: 200px;
+    width: 500px;
+    margin: -55px 0 50px -10px;
+    position: relative;
+}
+
+#top-page:after {
+    content: "";
+    background-color: transparent;
+    box-shadow: 0 15px 10px #777;
+    bottom: 15px;
+    right: 10px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+#top-page h1{
+    color: rgb(87,81,86);
+    font-family: "Hannotate SC";
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    padding: 10px 30px 30px 30px;
+    position: absolute;
+    top: 45px;
+    left: 45px;
+}
+
+.under-line {
+        border-bottom: 5px  solid rgb(255,100,100);
+    border-radius:  15px 255px 4px 225px/225px 15px 4px 15px;
+}
+/*==========*/
+/*Top-Explanation*/
+#top-explanation p{
+    font-family: "HanziPen SC";
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 150px;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+/*==========*/
+/*user-verify*/
+#user-verify {
+    background-color: rgb(255,255,204);
+    clear: both;
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+#user-verify h2 {
+    font-family: "Hannotate SC";
+    text-align: center;
+    padding: 20px 0;
+}
+
+#user-verify label {
+    font-family: "Hannotate SC";
+    font-size: 16px;
+    width: 30%;
+}
+
+#user-verify #username,
+#user-verify #password {
+    background-color: rgb(255,255,204);
+    border: 2px solid #333;
+    border-radius:  15px 255px 15px 225px/225px 15px 255px 15px;
+    font-family: "Hannotate SC";
+    margin-bottom: 20px;
+    height: 40px;
+    padding-left: 5px;
+    width: 68%;
+    outline: 0;
+    -webkit-transition: background-color .5s ease;
+    -moz-transition: background-color .5s ease;
+    -ms-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+}
+
+#user-verify #username:focus,
+#user-verify #password:focus {
+    background-color: #fff;
+}
+
+#login,
+#signup {
+    background-color: rgb(255,255,204);
+    border: 2px solid #333;
+    border-radius:  15px 255px 15px 225px/225px 15px 255px 15px;
+    display: block;
+    font-family: "Hannotate SC";
+    -webkit-transition: background-color .5s ease;
+    -moz-transition: background-color .5s ease;
+    -ms-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+}
+
+#login:hover,
+#signup:hover {
+    background-color: #fff;
+}
+
+#login {
+    margin-left: 216px;
+    width: 100px;
+}
+
+.divider {
+    background-color: #333;
+    border: none;
+    height: 2px;
+}
+
+#signup {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#test_login a {
+    display: block;
+    font-family: "Hannotate SC";
+    text-align: center;
+}
+/*==========*/
+/*Placeholder Styling*/
+input::-webkit-input-placeholder {
+    padding-left: 5px;
+}
+
+input:-moz-placeholder {
+    padding-left: 5px;
+}
+/*==========*/
+
+/*貼ってる風にする*/
+#user-verify:before {
+    content: '';
+    background-color: #eee;
+    border: 1px solid #eee;
+    opacity: 0.5;
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    margin-top: -10px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+#user-verify:after {
+    content: "";
+    background-color: transparent;
+    box-shadow: 0 15px 10px #777;
+    bottom: 15px;
+    right: 10px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+#login-form {
+    margin: auto;
+    height: 80%;
+    width: 80%;
+}
+/*==========*/
+/*Deco Area*/
+.deco {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.deco:after {
+    content: "";
+    background-color: transparent;
+    box-shadow: 0 15px 10px #777;
+    bottom: 15px;
+    right: 10px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.deco:before {
+    content: '';
+    background-color: #eee;
+    border: 1px solid #eee;
+    opacity: 0.5;
+    height: 30px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    margin-top: -10px;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.deco p {
+    font-family: "HanziPen SC";
+    font-size: 18px;
+    padding: 30px 15px 15px 15px;
+}
+
+#deco1 {
+    background-color: rgb(204,204,255);
+    position: absolute;
+    top: 200px;
+    left: -20px;
+}
+
+#deco2 {
+    background-color: rgb(204,255,255);
+    position: absolute;
+    top: 300px;
+    right: -120px;
+}
+
+#deco3 {
+    background-color: rgb(255,204,255);
+    position: absolute;
+    bottom: -150px;
+    right: 270px;
+}
+
+#deco4 {
+    background-color: rgb(204,255,204);
+    position: absolute;
+    top: -100px;
+    right: 100px;
+}
+
+#deco5 p{
+    color: rgb(100,100,255);
+    font-family: "HanziPen SC";
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 400px;
+    left: 30px;
+    width: 200px;
+}
+
+#deco6 p{
+    color: rgb(255,100,100);
+    font-family: "HanziPen SC";
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -40px;
+    right: -30px;
+    width: 250px;
+}
+/*==========*/
+/*Footer*/
+footer {
+    position: absolute;
+    bottom: 20px;
+}
+
+footer p {
+    color: #333;
+    font-family: "HanziPen SC";
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    padding-left: 70px;
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+/*==========*/

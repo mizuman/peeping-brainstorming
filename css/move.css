@@ -26,12 +26,12 @@ h6 {
 }
 
 /*Header*/
-header {
+#post-page {
     background-color: rgb(242,238,231);
     height: 100px;
 }
 
-h1{
+#post-page h1{
     color: rgb(87,81,86);
     font-family: "Hannotate SC";
     font-size: 20px;
@@ -128,6 +128,9 @@ h1{
 
 .post-it p {
     color: #333;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
     font-family: "Hannotate SC";
     font-size: 14px;
     letter-spacing: 0.1em;
